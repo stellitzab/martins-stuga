@@ -23,7 +23,7 @@
           <v-col cols="12" md="3">
             <v-btn 
             rounded
-            color="warning"
+            color="#C4C4C4"
             @click="removePerson"
             class="">
             <v-icon>
@@ -33,7 +33,7 @@
             </v-btn>
           <v-btn
             @click="addNewPerson"
-            color="primary"
+            color="#8C9DB0"
             rounded
             >
             <v-icon>
@@ -44,22 +44,30 @@
           </v-col>
         </v-container>
         <v-row>
+          <h2>
+            Gemensamma tillval
+          </h2>
           <v-col cols="12">
-            <v-container class="extras">
               <v-row>
-                <v-col cols="12" md="4">
-                <label>
-                  Helpension
-                </label>
-                <input type="checkbox">
-                <label>
-                  Helpension
-                </label>
-                <input type="checkbox">
-                <label>
-                  Helpension
-                </label>
-                <input type="checkbox">
+                <v-col cols="12" md="4" class="checkboxes">
+                  <div>
+                    <label>
+                      Öl + vinpaketet
+                    </label>
+                    <input type="checkbox">
+                  </div>
+                  <div>
+                    <label>
+                      Viltpaketet
+                    </label>
+                    <input type="checkbox">
+                  </div>
+                  <div>
+                    <label>
+                      Helpension
+                    </label>
+                    <input type="checkbox">
+                  </div>
                 </v-col>
                 <v-col cols="12" md="4">
                   <v-combobox
@@ -77,14 +85,15 @@
                     </template>
                     </v-combobox>
                 </v-col>
-                <v-col cols="12" md="4">
+                <v-col cols="12" md="2">
                   <label for="date">Ankomstdatum:</label>
                   <input type="date" id="arrive-date" name="date">
+                </v-col>
+                <v-col cols="12" md="2">
                   <label for="date">Hemresedatum:</label>
                   <input type="date" id="depart-date" name="date">
                 </v-col>
               </v-row>
-              </v-container>
             <p>
               <v-btn 
               class="book"
@@ -96,12 +105,15 @@
               @click="displayError"
               >Skicka in
               </v-btn>
-              Observera att bokningssystemet ej fungerar i dagsläget.
             </p>
           </v-col>
         </v-row>
     </form>
   </v-container>
+  <div>
+    <fire-icon>
+    </fire-icon>
+  </div>
 </div>
 </template>
 
@@ -145,18 +157,26 @@
     font-weight: 700;
   }
 
+  .checkboxes {
+    display: grid;
+    place-content: center;
+  }
+
 </style>
 
 <script>
 
 import bookingform from '~/components/BookingForm'
+import fireicon from '~/components/FireIcon'
 
 export default {
 
   components: {
     bookingform,
+    fireicon,
   },
-  data() {
+  data()
+    {
     return {
         person:
         {
@@ -183,13 +203,15 @@ export default {
         alert('Förlåt, det går inte att boka i dagsläget!');
       },
       addNewPerson() {
-        console.log("Running add new person!")
         this.persons.push({name: this.person.name, lastname: this.person.lastname, email: this.person.email});
-        console.log("Persons list: " + this.persons.length)
-        //Here display new section with the same kind of form? 
       },
       removePerson(index) {
-        this.persons.pop();
+        if(this.persons.length == 1) {
+          alert('Minst en person måste finnas i bokningen!')
+        }
+        else {
+          this.persons.pop();
+        }
       }
 
     },
