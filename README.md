@@ -1,4 +1,5 @@
 # Martins stuga
+This is a work-in-progress one-page website built with Vue.js + Nuxt.js. 
 
 ## Build Setup
 
