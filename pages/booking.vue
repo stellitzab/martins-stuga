@@ -119,18 +119,14 @@
 
 <style scoped>
   .v-form {
-    font-family: 'Poppins';
+    font-family: 'Montserrat';
   }
   .booking {
     background-size: cover;
   }
-  h1 {
-    color: "primary";
-    font-weight: lighter;
-  }
 
   h2 {
-    font-family: 'Nunito Sans';
+    font-family: 'Nunito Sans', sans-serif;
     color: "primary";
     font-weight: lighter;
   }
@@ -142,7 +138,7 @@
     min-width: 92px;
     padding: 0 23.1111111111px;
     color: white;
-    font-family: "Poppins";
+    font-family: "Montserrat";
     font-weight: bold;
   }
 
@@ -153,8 +149,8 @@
   }
 
   label {
-    font-family: 'Poppins';
-    font-weight: 700;
+    font-family: 'Montserrat';
+    font-weight: 400;
   }
 
   .checkboxes {

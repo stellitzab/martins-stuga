@@ -44,25 +44,21 @@
 </template>
 
 <style>
-
   #Ellipse1, #Ellipse2, #Ellipse3 {
     animation: sparkle 2s ease-in;
     animation-iteration-count: infinite;
     transform-origin: 0;
   }
-
     #Ellipse4, #Ellipse5, #Ellipse6, #Ellipse7, #Ellipse8  {
     animation: sparkle2 1.8s ease-in-out;
     animation-iteration-count: infinite;
     transform-origin: 0;
   }
-
     #Ellipse8, #Ellipse9, #Ellipse10  {
     animation: sparkle3 1.3s ease-in;
     animation-iteration-count: infinite;
     transform-origin: 0;
   }
-
   @keyframes sparkle{
     from {
       -moz-transform: translate(0, 0)
@@ -71,7 +67,6 @@
       -moz-transform: translate(0, -25%)
     }
   }
-
   @keyframes sparkle2{
     from {
       -moz-transform: translate(0, 0)
@@ -80,7 +75,6 @@
       -moz-transform: translate(0, -10%)
     }
   }
-
   @keyframes sparkle3{
     from {
       -moz-transform: translate(0, 0)
@@ -89,12 +83,10 @@
       -moz-transform: translate(0, -30%)
     }
   }
-
 </style>
 
 <script>
 export default {
-
   props: {
     iconName: {
       type: String,
@@ -110,5 +102,4 @@ export default {
     },
   }
 }
-
 </script>

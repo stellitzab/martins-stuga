@@ -31,7 +31,6 @@
 
 <script>
 export default {
-
       data: () => ({
       valid: false,
       firstname: '',
@@ -50,4 +49,3 @@ export default {
     }),
 }
 </script>
-

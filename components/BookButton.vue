@@ -12,8 +12,8 @@
 
 <style scoped>
   .v-btn {
-    font-family: 'Poppins';
-    font-weight: 700;
+    font-family: 'Montserrat';
+    font-weight: 400;
     font-size: 1.2em;
     font-style: normal;
   }

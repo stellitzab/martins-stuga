@@ -8,7 +8,6 @@
 </template>
 
 <style scoped>
-
     .footer {
     min-height: 200px;
     background-color: #1A1F28;
@@ -25,7 +24,6 @@
 
 <script>
 export default {
-
     data: () => ({
       icons: [
         'mdi-home',
