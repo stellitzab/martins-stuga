@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Nunito Sans";
+    src: local("Nunito Sans"), url(~assets/fonts/NunitoSans-SemiBold.ttf), format("truetype");}
+
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins"), url(~assets/fonts/Poppins-Regular.ttf), format("truetype");
+}
+
+html, body {
+    height: 100%;
+    //overflow-x: hidden;
+    font-family: 'Nunito Sans';
+}
+
+h1 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: "primary";
+    font-weight: 200;
+}
+      
